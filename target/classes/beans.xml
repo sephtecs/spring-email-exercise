@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="to" class="com.training.spring.model.To">
+		<property name="toName" value="Tufail Ahmed"></property>
+		<property name="toEmail" value="tufailahmedkhan@gmail.com"></property>
+	</bean>
+
+	<bean id="from" class="com.training.spring.model.From">
+		<property name="fromName" value="Terrence Ingraham"></property>
+		<property name="fromEmail" value="tufailahmedkhan@gmail.com"></property>
+	</bean>
+
+	<bean id="subject" class="com.training.spring.model.Subject">
+		<property name="caption" value="Hi how r u"></property>
+	</bean>
+
+	<bean id="body" class="com.training.spring.model.Body">
+		<property name="message" value="Hello Instructor, love you"></property>
+	</bean>
+
+	<bean id="email" class="com.training.spring.model.Email">
+		<property name="to" ref="to"></property>
+		<property name="from" ref="from"></property>
+		<property name="subject" ref="subject"></property>
+		<property name="body" ref="body"></property>
+	</bean>
+
+
+</beans>
